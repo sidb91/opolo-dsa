@@ -1,4 +1,4 @@
-package com.opolo.dsa.coltdsaudemycourse.service;
+package com.opolo.dsa.service;
 
 import org.springframework.stereotype.Service;
 

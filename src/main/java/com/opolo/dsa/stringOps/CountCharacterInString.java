@@ -1,4 +1,4 @@
-package com.opolo.dsa.coltdsaudemycourse.stringOps;
+package com.opolo.dsa.stringOps;
 
 import java.util.HashMap;
 import java.util.Map;

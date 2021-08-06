@@ -1,4 +1,4 @@
-package com.opolo.dsa.coltdsaudemycourse.arrays;
+package com.opolo.dsa.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
