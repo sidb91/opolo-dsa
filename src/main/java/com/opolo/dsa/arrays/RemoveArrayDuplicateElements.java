@@ -1,6 +1,8 @@
 package com.opolo.dsa.arrays;
 
+import java.util.HashMap;
 import java.util.LinkedHashSet;
+import java.util.Map;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -9,21 +11,35 @@ import java.util.LinkedHashSet;
 public class RemoveArrayDuplicateElements {
 
     public static void main(String[] args) {
-        int a[] = { 1, 1,  3, 4, 4, 5, 6, 2, 2, 2, 3, 6, 7, 8};
+        int a[] = { 1, 1, 3, 4, 4, 5, 6, 2, 2, 2, 3, 6, 7, 8};
         int n = a.length;
+
+        // Printing The array elements
+        System.out.println("----duplicate elements-----");
+        for (int i = 0; i < n; i++)
+            System.out.print(a[i] + " ");
+
+        System.out.println();
   
         //n = removeduplicates1(a, n);
         //removeDuplicates2(a);
         removeDuplicates3(a);
   
-        // Printing The array elements
-        for (int i = 0; i < n; i++)
-            System.out.print(a[i] + " ");
     }
 
     //Using Hashmap
     public static void removeDuplicates3(int[] a){
-        
+
+        Map<Integer,Boolean> map = new HashMap<>();
+
+        for(int i=0;i<a.length;i++){
+            if(!map.containsKey(a[i])){
+                map.put(a[i], true);
+            }
+        }
+
+        System.out.println("----unique elements-----");
+        map.forEach((k,v) -> System.out.print(String.format("%s ", k,v)));
     }
 
     //LinkedHashSet
