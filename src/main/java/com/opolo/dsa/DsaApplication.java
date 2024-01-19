@@ -1,17 +1,17 @@
 package com.opolo.dsa;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.aop.AopAutoConfiguration;
 
-import com.opolo.dsa.service.DsaService;
+import java.util.*;
+import java.util.stream.Collectors;
 
-@SpringBootApplication
-public class DsaApplication implements CommandLineRunner	{
-
-	@Autowired
-	private DsaService dsaServ;
+@SpringBootApplication(exclude = AopAutoConfiguration.class)
+@Slf4j
+public class DsaApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DsaApplication.class, args);
@@ -19,8 +19,7 @@ public class DsaApplication implements CommandLineRunner	{
 
 	@Override
 	public void run(String... args) throws Exception {
-		dsaServ.testPrograms();
-		
+		log.info("Staring DSA application...");
 	}
-
 }
+
