@@ -6,9 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.aop.AopAutoConfiguration;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
 @SpringBootApplication(exclude = AopAutoConfiguration.class)
 @Slf4j
 public class DsaApplication implements CommandLineRunner {
